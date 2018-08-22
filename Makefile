@@ -14,6 +14,6 @@ release:
 	docker build -t $(NAME) -f ./docker/payment/Dockerfile-release .
 
 test:
-	GROUP=weaveworksdemos COMMIT=$(COMMIT) ./scripts/build.sh
+	GROUP=idreeskun COMMIT=$(COMMIT) ./scripts/build.sh
 	./test/test.sh unit.py
 	./test/test.sh container.py --tag $(COMMIT)
