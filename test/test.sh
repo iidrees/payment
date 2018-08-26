@@ -14,7 +14,7 @@ fi
 
 if [[ -z $($DOCKER_CMD images | grep test-container) ]] ; then
     echo "Building test container"
-    docker build -t test-container $SCRIPT_DIR > /dev/null
+    sudo docker build -t test-container $SCRIPT_DIR > /dev/null
 fi
 
 echo "Testing $1"
